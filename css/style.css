@@ -53,4 +53,5 @@ img{
 .row .col{
     display: flex;
     background-color: black;
+    min-width: 300px;
 }

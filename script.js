@@ -36,3 +36,22 @@ const teamMembers = [
     img: "img/female3.png"
   }
 ];
+// DOM ELEMENTS
+const container = document.querySelector(".row");
+//
+let infoTeam = "";
+for(let i = 0; i < teamMembers.length; i++) {
+  const member = teamMembers[i];
+  infoTeam += `<div class="col">
+                <div>
+                  <img src="${member.img}" alt="${member.name}">
+                </div>
+                <div class="text-card">
+                  <h3>${member.name}</h3>
+                  <h5>${member.role}</h5>
+                  <span>${member.email}</span>
+                </div>
+              </div>`
+}
+
+container.innerHTML = infoTeam;
